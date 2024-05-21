@@ -1,0 +1,62 @@
+<section class="bg-rose-50 mt-24 relative overflow-hidden">
+  <div class="container mx-auto py-16 ">
+    <div class="flex flex-wrap">
+      <div class="w-full md:w-1/2   lg:w-1/3 xl:w-1/4 p-5 sm:p-5 order-1 lg:order-1 md:order-1 xl:order-1 sm:order-1 py-5">
+        <img src="../../../assets/img/icons8-education-48.png" alt="">
+        <p class="mt-8 text-2xl">5 Rue de Bretagne 92140</p>
+        <p class="mt-2 text-rose-800 font-light">Clamart , France </p>
+        <app-email class="mt-6 block text-zinc-700 font-light"></app-email>
+        <app-phone class="mt-2 block text-zinc-700 font-light" ></app-phone>
+        <app-social-links class="mt-2 block opacity-60"  color="dark"></app-social-links>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-5 sm:p-5 order-1 lg:order-2 md:order-3 xl:order-2 sm:order-1 py-5">
+        <h3 class="text-2xl">Category</h3>
+        <ul class="mt-8 zinc-700 font-light">
+          <li class="mt-5"><a [routerLink]="['/','creative']">  Creative Writing</a></li>
+          <li class="mt-2"><a [routerLink]="['/','film']" >Film & Video</a></li>
+          <li class="mt-2"><a [routerLink]="['/','graphic']" >Graphic Design </a></li>
+          <li class="mt-2"><a [routerLink]="['/','ui']" >UI/UX Design</a></li>
+          <li class="mt-2"><a [routerLink]="['/','business']" >Business Analytics</a></li>
+          <li class="mt-2"><a [routerLink]="['/','marketing']" >Marketing</a></li>
+        </ul>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-5 sm:p-5 order-1 lg:order-3 md:order-4 xl:order-3 sm:order-1 py-5">
+        <h3 class="text-2xl"> Quick Links</h3>
+        <ul class="mt-8 text-zinc-700 font-light">
+          <li class="mt-2"><a [routerLink]="['/','privacy']">Privacy Policy</a></li>
+          <li class="mt-2"><a [routerLink]="['/','discussion']">Discussion </a></li>
+          <li class="mt-2"><a [routerLink]="['/','terms']">Terms & Conditions</a></li>
+          <li class="mt-2"><a [routerLink]="['/','customer']"> Customer Support</a></li>
+          <li class="mt-2"><a [routerLink]="['/','course']"> Course FAQ's</a></li>
+        </ul>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-5 sm:p-5 order-1 lg:order-4 md:order-2 xl:order-4 sm:order-1 py-5">
+        <h3 class=" text-2xl "> Subscribe</h3>
+        <p class="pt-3 px-5 mt-8 font-light text-zinc-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aspernatur aliquid repellat quas ipsam magni quidem, beatae blanditiis enim placeat facilis perspiciatis doloribus. Saepe, labore tempora. Corporis ea dolorum aut!</p>
+        <app-subscribe-form></app-subscribe-form>
+      </div>
+      </div>
+
+    </div>
+
+   </section>
+  <section class=" bg-zinc-800 text-white ">
+    <div class="container mx-auto py-4">
+      <div class="flex flex-wrap">
+        <div class="w-full lg:w-1/2  ">
+          <ul class=" flex flex-wrap gap-3 text-white justify-center lg:justify-start">
+            <li><a [routerLink]="" class="hover:text-rose-600 transition-all duration-300 ">Terms of Service</a></li>
+            <li><a>*</a></li>
+            <li><a [routerLink]="" class="hover:text-rose-600 transition-all duration-300 ">Privacy Policy</a></li>
+            <li><a>*</a></li>
+            <li><a [routerLink]="" class="hover:text-rose-600 transition-all  duration-300">Sitemap</a></li>
+            <li><a>*</a></li>
+            <li><a [routerLink]="" class="hover:text-rose-600 transition-all duration-300 ">Security</a></li>
+          </ul>
+        </div>
+        <div class="w-full lg:w-1/2 text-center lg:text-right pt-5 lg:pt-0">
+          &#64;JAFSCodeSchool
+        </div>
+      </div>
+    </div>
+  </section>

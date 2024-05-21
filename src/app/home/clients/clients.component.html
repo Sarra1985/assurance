@@ -1,0 +1,26 @@
+<section class="py-5  ">
+<div class="container mx-auto px-5 sm:px-24 xl:px-10 2xl:px-0">
+  <div class=" bg-rose-50 rounded-s-3xl py-10 px-0 md:px-10 xl:px-24 ">
+    <app-heading
+    class="mx-auto md:mx-0 py-5 pb-10 block max-w-md"
+    subHeading=""
+    headingText1="Best Supporter of"
+    headingText2="Edule"
+    specialHeadingID="2"
+    align="C">
+  </app-heading>
+    <div>
+  <div #sliderContainer class="flex w-full justify-between items-center  overflow-hidden " *ngIf="this.clients.length>0">
+            <ul #slider class="flex transition-all duration-300 gap-3 " [style.width.px]="this.sliderWidth" [style.marginLeft.px]="this.sliderMarginLeft">
+
+              <li class="cursor-pointer  px-0  gap-3 mx-auto " [style.width.px]="this.slideWidth" *ngFor="let client of this.clients">
+                <img src="../../../assets/img/{{ client.clientImage}}" alt=""class="  py-16">
+
+                </li>
+            </ul>
+
+        </div>
+      </div>
+</div>
+  </div>
+  </section>

@@ -1,0 +1,48 @@
+<section class="bg-zinc-100 min-h-screen flex py-28" >
+  <div class="w-full pt-48 ">
+    <img class=" left-0 pl-32 animate-bounce " src="../../assets/img/icons8-environnement-64.png" alt="">
+<div class=" hidden sm:block absolute mr-0 right-0">
+  <div class="ml-4 w-32 h-32 bg-white rounded-full flex flex-wrap justify-center items-center ">
+ <div class="flex items-baseline ">
+  <p class="text-4xl text-rose-800">4.5</p>
+  <p class="pl-1"><img src="../../assets/img/icons8-etoile-48.png" alt=""></p>
+  </div>
+</div>
+</div>
+<div class="container  flex-wrap  lg:flex-nowrap flex">
+  <div class="my-auto max-w-md">
+    <div class=" mb-12 ">
+    <p class="text-rose-800 font-semibold text-lg mb-16">
+      commencez votre cours préféré
+    </p>
+
+<h2 class="text-4xl font-semibold text-zinc-800 mb-12">
+  Apprenez maintenant de n'importe où et construisez votre
+  <span class="text-rose-900 relative">brillante carrière
+    <img  class="absolute -bottom-6 right-0" src="../../assets/img/pngegg (4).png" alt="" >
+  </span>
+</h2>
+<p class="text-slate-500 mb-12 text-xl font-light">
+  Elle a survécu non seulement à cinq siècles mais aussi au saut vers la composition électronique.
+</p>
+<app-button name="Commencer les Cours" size="L" animation="C"></app-button>
+
+<div class="pl-16 pt-20 ">
+  <img (click)="this.canShowVideo=true" class=" " src="../../assets/img/icons8-bouton-lecture-entouré-64.png" alt="">
+</div>
+</div>
+</div>
+
+
+<div class="w-full">
+<img class="pl-1 lg:pt-12 ml-auto " src="../../assets/img/all-pages-2.png" alt="">
+</div>
+
+
+</div>
+</div>
+</section>
+<app-video-popup
+youtubeURL="https://www.youtube.com/embed/8kzONvVaWks?si=YtK_IGLm9CNzPvGU"
+(close)="this.canShowVideo=false" [show]="canShowVideo"></app-video-popup>
+

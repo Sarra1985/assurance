@@ -1,0 +1,18 @@
+<section class="py-24">
+
+  <app-heading
+  class="mb-16 block"
+  subHeading="Student Testimonial"
+  headingText1="Feedback From"
+  headingText2="Student"
+  specialHeadingID="2"
+  align="C"
+  ></app-heading>
+
+  <app-slider-feedbacks  *ngIf="this.feedbacks.length>0" [itemsFeedbacks]="this.feedbacks">
+  </app-slider-feedbacks>
+
+  </section>
+
+
+

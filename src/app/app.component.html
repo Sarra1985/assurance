@@ -1,0 +1,93 @@
+<nav class="absolute w-full top-0 left-0 h-screen z-50 {{ isSidebarShowing?'flex':'hidden'}} ">
+  <div class="bg-white w-full md:max-w-sm shadow-2xl">
+    <div class="flex justify-end p-5">
+      <svg (click)=" this.closeSideBar() " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </div>
+    <div>
+        <div><app-phone class="mt-3"></app-phone></div>
+        <div class="pt-2"><app-email class="mt-3 "></app-email></div>
+        <div class="pt-8"><app-auth-links class="mt-9"></app-auth-links></div>
+        <div class="px-5 mt-6">
+        <app-menushared></app-menushared>
+      </div>
+
+
+      <div class="mt-6">
+        <app-social-links></app-social-links>
+      </div>
+    </div>
+  </div>
+
+  <div (click)="this.closeSideBar()"  class="bg-slate-600 hidden md:block md:w-full opacity-60">
+  </div>
+</nav>
+
+
+<header class="absolute w-full z-40">
+  <div class="bg-slate-600 hidden lg:block">
+    <div class="container text-white py-2">
+      <ul class="flex justify-between">
+
+        <li>Tous les formations sont valables pour tous les étudiants  <span></span>
+        </li>
+
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-6 h-6" width="15" height="15">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+          </svg>
+        </li>
+
+        <li>
+          <app-phone></app-phone>
+        </li>
+
+        <li>
+          <app-email></app-email>
+        </li>
+
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+          </svg>
+        </li>
+
+        <li>
+          <app-social-links></app-social-links>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="px-8  {{ isMenuScrolled?'fixed top-0 w-full shadow-xl bg-zinc-100 animate-slideInDown animate-faster':'pt-10' }}">
+    <div  class=" h-20 py-0 flex shadow-xl container items-center justify-between bg-zinc-300  border-zinc-400 mt-10 rounded-xl border-opacity-30  {{ isMenuScrolled?'':'border'}}">
+      <a href="">
+         <img src="../assets/img/icons8-education-48.png" alt="">
+      </a>
+
+      <div class='lg:hidden'>
+        <svg (click)="this.openSideBar()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </div>
+       <app-menushared class="hidden lg:block"></app-menushared>
+       <app-auth-links class="hidden lg:block"></app-auth-links>
+      </div>
+    </div>
+</header>
+<!-- py-40  -->
+  <div  class="px-32">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+
+
+<button *ngIf="isMenuScrolled" (click)="scrollToTop()" class="flex text-white transition-all duration-300 fixed bottom-5 right-5 w-10 h-10 bg-zinc-600 hover:bg-rose-800 rounded-full">
+
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 m-auto">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+  </svg>
+</button>
